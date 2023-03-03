@@ -3,7 +3,6 @@ group 'app'
 buildscript {
     ext.kotlin_version = '1.1.2'
     ext.http4k_version = '1.22.2'
-    ext.spring_version = "4.3.4.RELEASE"
 
     repositories {
         mavenCentral()
@@ -68,7 +67,7 @@ sourceSets {
 idea {
     module {
         sourceDirs += file("${buildDir}/generated/source/kapt/main/")
-        generatedSourceDirs += "${buildDir}/generated/source/kapt/main/"
+        generatedSourceDirs += file("${buildDir}/generated/source/kapt/main/")
     }
 }
 
